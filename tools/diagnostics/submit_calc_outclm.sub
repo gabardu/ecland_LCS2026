@@ -1,0 +1,13 @@
+#!/bin/bash
+
+#SBATCH --job-name=calc_outclm
+#SBATCH --qos=nf
+#SBATCH --mem=32G
+#SBATCH --output=test-serial.%j.out
+
+module load python3
+
+expid=$1
+sitename=$2
+
+python3 /home/paga/projects/ecland_opensource/ecland_glaciers/plots/calc_outclm.py ${expid} ${sitename}

@@ -16,16 +16,40 @@ sites:
                                               #             (and so iniDate, endDate, dx, clat*,clon* ...)
     group: LCS2026                               # Group the sites extracted under a common label/project, e.g. TERRENO,PLUMBER2 etc.
     sitenames:                                # site name code, MUST comply to XX-YYY for 1D, more flexible for 2D
-        - CS-001
+        - CS-002
+        - CS-003
+        - CS-004
+        - CS-005
+        - CS-006
+        - CS-007
+        - CS-008
     iniDate:                                  # iniDate, one entry for each entry of sitename
         - 20170101
+        - 20170101
+        - 20211231
+        - 20211231
+        - 20211231
+        - 20211231
+        - 20211231
     endDate:                                  # endDate, one entry for each entry of sitename
+        - 20211231
+        - 20211231
+        - 20211231
+        - 20211231
+        - 20211231
+        - 20211231
         - 20211231
 
 # This is only relevant for ftype=1D
 point: 
     lat_lon:                                  # lat/lon pairs, one entry for each entry of sitename, 
-        - 46.829,9.809                        # applicable for 1D (site) simulations
+        - 46.463,9.185                        # San Bernardino
+        - 46.604,9.963                        # Zuoz
+        - 46.558,7.890                        # Murren
+        - 46.663,8.592                        # Andermatt
+        - 46.505,8.308                        # Ulrichen
+        - 46.813,9.848                        # Davos
+        - 46.861,9.896                        # Kloster
 
     which_surface: 
         - land                                # Values accepted: orig (keep lsm/lake fraction from initial conditions, e.g. era5),
@@ -39,8 +63,8 @@ point:
 
 # Configuration of folders, paths etc.
 config:
-    workingdir: /scratch/paga/oper_data_point             # working dir forcing
-    inidir:     /scratch/paga/oper_data_point             # working dir initial cond
+    workingdir: /scratch/paga/oper_data_point_2             # working dir forcing
+    inidir:     /scratch/paga/oper_data_point_2             # working dir initial cond
     sodir:      /perm/paga/ecland_input/clim/          # output dir for initial cond and static fields
     fodir:      /perm/paga/ecland_input/forcing/       # output dir for forcing
     scriptsdir: /home/paga/projects/ecland_opensource/ecland_LCS2026/tools/create_forcing/scripts/                   # Directory with create_forcing scripts
